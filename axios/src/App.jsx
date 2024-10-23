@@ -36,6 +36,12 @@ function App() {
     await axios.put(`${url}/users/${userId}`, updateUser)
   }
 
+  // ! Delete isteği
+  const deleteUser = async (userId) => {
+    await axios.delete(`${url}/users/${userId}`)
+
+  }
+
 
   useEffect(() => {
     // ! geti çalıştırma
@@ -55,6 +61,9 @@ function App() {
     //   "username": "Gokhan",
     //   "password": 23015
     // })
+
+    // ! Delete çalıştırma
+    deleteUser('4371')
 
   }, [])
 
